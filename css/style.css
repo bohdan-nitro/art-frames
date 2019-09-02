@@ -43,6 +43,7 @@ html {
   height: 100%;
   text-decoration: none;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.2s linear;
 }
 .header .header__inner .nav .nav__link .title {
   font-size: 13px;
@@ -50,6 +51,9 @@ html {
   line-height: 11px;
   font-family: "Nunito Sans", sans-serif;
   color: #FFFFFF;
+}
+.header .header__inner .nav .nav__link:hover {
+  background-color: #313131;
 }
 .header .header__inner .nav .nav__link.logo img.logo {
   width: 40px;
@@ -189,6 +193,7 @@ html {
   padding: 15px 20px 15px 20px;
   border: 1px solid #000000;
   background-color: black;
+  transition: background-color 0.2s linear;
 }
 .products .btn-store .title {
   color: #ffffff;
@@ -197,6 +202,63 @@ html {
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
   vertical-align: sub;
+}
+
+.btn-store:hover {
+  background: red;
+}
+
+.works {
+  display: flex;
+  width: 100%;
+}
+.works .works__content {
+  width: 50%;
+  margin-left: 120px;
+}
+.works .works__content .works__title {
+  font-size: 35px;
+  font-family: "EB Garamond";
+  color: black;
+  line-height: 1.1;
+  margin-bottom: 60px;
+}
+
+.works__text {
+  text-align: center;
+  position: relative;
+}
+
+.works__data {
+  text-align: center;
+  color: #888888;
+  font-size: 14px;
+  line-height: 10px;
+}
+
+.works__photo {
+  margin-top: 60px;
+  width: 50%;
+  display: block;
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.btn-work {
+  display: block;
+  height: 50px;
+  max-width: 140px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 15px 20px 15px 20px;
+  border: 1px solid #000000;
+  background-color: black;
+  transition: background-color 0.2s linear;
+  color: white;
+  margin-top: 30px;
+  vertical-align: sub;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
