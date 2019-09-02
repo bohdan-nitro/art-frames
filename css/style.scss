@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,500i,600,600i,700,800|Nunito+Sans:200,300,300i,400,400i,600,600i,700,700i,800&display=swap&subset=cyrillic');
+
+$nunito: 'Nunito Sans', sans-serif;
+$garamond: 'EB Garamond', serif;
+
+html {
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "port";

@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,500,500i,600,600i,700,800|Nunito+Sans:200,300,300i,400,400i,600,600i,700,700i,800&display=swap&subset=cyrillic");
+html {
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 85px;
+  position: fixed;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 100;
+}
+.header .container {
+  max-width: 100%;
+  height: 100%;
+}
+.header .header__inner {
+  height: inherit;
+}
+.header .header__inner .nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__inner .nav .nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header .header__inner .nav .nav__link .title {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 11px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #FFFFFF;
+}
+.header .header__inner .nav .nav__link.logo img.logo {
+  width: 40px;
+  height: 40px;
+  margin: 0 140px;
+}
+
+.intro {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.intro .intro__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.intro .container {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  max-width: 1060px;
+  z-index: 2;
+}
+.intro .container .intro-col {
+  margin-top: 315px;
+  width: 50%;
+}
+.intro .container .intro-col.left .title {
+  color: #fff;
+  font-family: "EB Garamond", serif;
+  font-size: 80px;
+  line-height: 75px;
+}
+.intro .container .intro-col.right {
+  padding-left: 160px;
+}
+.intro .container .intro-col.right .title {
+  color: #FFFFFF;
+  font-family: "EB Garamond", serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.intro .container .intro-col.right .subtitle {
+  color: #FFFFFF;
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+.intro .container .intro-col.right .btn {
+  margin-top: 45px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 27%;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  margin-bottom: 140px;
+}
+.products .products-menu {
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
+.products .products-menu .products-title {
+  color: #000000;
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+  line-height: 30px;
+  opacity: 0.3;
+  margin: 0 33px;
+}
+.products .products-menu .products-title.active {
+  opacity: 1;
+}
+.products .products-store {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  border-top: 1px solid rgba(158, 158, 158, 0.3);
+}
+.products .products-store .products-item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 33.33333%;
+  padding: 65px;
+  border-right: 1px solid rgba(158, 158, 158, 0.3);
+  border-bottom: 1px solid rgba(158, 158, 158, 0.3);
+}
+.products .products-store .products-item .products-image {
+  margin: 0 auto;
+  display: block;
+  max-width: 220px;
+}
+.products .products-store .products-item .products-subtitle {
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.5;
+  margin-top: 40px;
+  font-family: "EB Garamond";
+}
+.products .products-store .products-item .text {
+  text-align: center;
+  font-size: 16px;
+  font-family: "EB Garamond";
+  margin-top: 20px;
+}
+.products .products-store .products-item .text .price {
+  text-align: center;
+  font-weight: bold;
+}
+.products .btn-store {
+  display: block;
+  height: 60px;
+  max-width: 160px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 15px 20px 15px 20px;
+  border: 1px solid #000000;
+  background-color: black;
+}
+.products .btn-store .title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  vertical-align: sub;
+}
+
+/*# sourceMappingURL=style.css.map */
