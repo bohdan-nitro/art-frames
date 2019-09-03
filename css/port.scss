@@ -367,7 +367,6 @@
 .about {
   display: flex;
   width: 100%;
-  overflow: hidden;
   max-height: 720px;
 
   .container__about {
@@ -380,13 +379,12 @@
 
     .about__photo {
       width: 50%;
-      overflow: hidden;
 
       &:after {
         content: '';
         display: block;
         position: absolute;
-        top: 0;
+        top: -100px;
         right: 50%;
         width: 100%;
         height: 620px;
@@ -407,6 +405,25 @@
 
 .about__content {
   width: 50%;
+  padding-left: 180px;
+  margin-top: 180px;
+
+  .about__title {
+    color: #000000;
+    font-family: $garamond;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 30px;
+
+    .about__text  {
+      color: #888888;
+      font-family: $nunito;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+    }
+  }
 }
 
 
