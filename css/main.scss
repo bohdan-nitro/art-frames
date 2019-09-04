@@ -576,7 +576,9 @@
     max-height: 50px;
     opacity: 0.03;
     background-color: #000000;
-    color: black;
+    color: #000000;
+
+    &::placeholder [your email];
 
   }
 
