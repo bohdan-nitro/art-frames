@@ -486,11 +486,15 @@ img {
 }
 .subscribe .container__sub {
   margin-bottom: 120px;
-  display: flex;
   margin-top: 50px;
   width: 100%;
   justify-content: center;
   flex-flow: row nowrap;
+}
+.subscribe .container__input {
+  display: flex;
+  margin: 0 auto;
+  max-width: 480px;
 }
 .subscribe input {
   width: 100%;
