@@ -13,4 +13,8 @@ html {
   box-sizing: border-box;
 }
 
-@import "port";
+img {
+  object-fit: cover;
+}
+
+@import "main";
