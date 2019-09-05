@@ -711,7 +711,19 @@ input {
   margin: 0 auto;
   justify-content: space-between;
 }
-.our__blog .blog__container .blog__date {
+.our__blog .blog__col {
+  width: 100%;
+  height: auto;
+  padding: 0 15px;
+  max-width: 330px;
+}
+.our__blog .blog__col .blog__items {
+  max-width: 330px;
+}
+.our__blog .blog__col .blog__items .blog__header {
+  position: relative;
+}
+.our__blog .blog__col .blog__items .blog__date {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -728,22 +740,13 @@ input {
   background-color: #ffffff;
   text-align: center;
 }
-.our__blog .blog__container .blog__date .date {
+.our__blog .blog__col .blog__items .blog__date .date {
   color: #000000;
   font-family: "EB Garamond", serif;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 22px;
-}
-.our__blog .blog__col {
-  width: 100%;
-  height: auto;
-  padding: 0 15px;
-  max-width: 300px;
-}
-.our__blog .blog__col .blog__items {
-  max-width: 300px;
 }
 .our__blog .blog__col .blog__content {
   width: 100%;
