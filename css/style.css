@@ -13,11 +13,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  object-fit: cover;
-  width: 100%;
-}
-
 input {
   border: none;
   outline: none;
@@ -722,6 +717,10 @@ input {
 }
 .our__blog .blog__col .blog__items .blog__header {
   position: relative;
+}
+.our__blog .blog__col .blog__items .blog__header img {
+  object-fit: cover;
+  width: 100%;
 }
 .our__blog .blog__col .blog__items .blog__date {
   display: flex;
