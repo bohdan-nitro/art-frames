@@ -12,18 +12,19 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-input {
-  width: 100%;
-  max-width: 480px;
-  height: 50px;
-  max-height: 50px;
-  opacity: 0.03;
-  background-color: #000000;
-  color: #000000;
+
+a {
+  text-decoration: none;
 }
 
 img {
   object-fit: cover;
 }
 
+input {
+  border: none;
+  outline: none;
+}
+
 @import "main";
+@import "blog";
