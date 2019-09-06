@@ -716,11 +716,23 @@ input {
   max-width: 330px;
 }
 .our__blog .blog__col .blog__items .blog__header {
+  height: 300px;
   position: relative;
 }
 .our__blog .blog__col .blog__items .blog__header img {
   object-fit: cover;
   width: 100%;
+}
+.our__blog .blog__col .blog__items .blog__header:after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #E5E5E5;
+  bottom: -20px;
+  right: -20px;
+  z-index: -1;
+  position: absolute;
 }
 .our__blog .blog__col .blog__items .blog__date {
   display: flex;
@@ -783,6 +795,87 @@ input {
 }
 .our__blog .blog__col:nth-child(6) {
   padding-top: 220px;
+}
+
+.count {
+  margin-top: 100px;
+  width: 100%;
+}
+.count .container__count {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  position: relative;
+  margin-bottom: 120px;
+}
+.count .container__count .container__content-count {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  max-width: 250px;
+  justify-content: center;
+  margin: 0 auto;
+}
+.count .count__items {
+  padding: 0 15px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #1A1A1A;
+}
+.count .count__items-second {
+  background-color: #1A1A1A;
+  height: 40px;
+  width: 40px;
+}
+.count .count__items-second .count__second {
+  color: #FFFFFF;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+}
+
+.intro {
+  width: 100%;
+}
+.intro .container__intro {
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  width: 100%;
+  max-width: 1080px;
+  flex-flow: column;
+}
+.intro .container__intro .articles__date {
+  color: #888888;
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 12px;
+  text-align: center;
+}
+.intro .container__intro .articles__title {
+  margin: 0 auto;
+  max-width: 470px;
+  margin-top: 15px;
+  color: #000000;
+  font-family: "EB Garamond", serif;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+.intro .container__intro .articles__photo {
+  margin-top: 50px;
+  width: 100%;
+}
+.intro .container__intro .articles__photo img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
