@@ -138,6 +138,8 @@
         font-size: 14px;
         font-weight: 300;
         line-height: 22px;
+        margin-bottom: 50px;
+
 
         .revists-text-title {
           color: #000000;
@@ -149,6 +151,41 @@
           left: -30px;
           top: -5px;
         }
+      }
+    }
+
+    .revists__title-wrap  {
+      width: 100%;
+      max-width: 680px;
+      color: #000000;
+      font-family: $garamond;
+      font-size: 35px;
+      line-height: 40px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .revists__text-wrap-second  {
+      margin-top: 50px;
+      position: relative;
+      width: 100%;
+      max-width: 540px;
+      color: #888888;
+      font-family: $nunito;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      margin-bottom: 40px;
+    }
+    .container__revists-photo {
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+      flex-flow: row nowrap;
+      max-width: 720px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
       }
     }
   }
