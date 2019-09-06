@@ -190,3 +190,13 @@
     }
   }
 }
+
+.related  {
+  width: 100%;
+
+  .container__related {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}
