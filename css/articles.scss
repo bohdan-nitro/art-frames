@@ -6,7 +6,7 @@
     margin-top: 80px;
     display: flex;
     width: 100%;
-    max-width: 1080px;
+    max-width: 1160px;
     flex-flow: column;
 
     .articles__date {
@@ -36,6 +36,119 @@
       img {
         width: 100%;
         object-fit: cover;
+      }
+    }
+  }
+}
+
+.revists  {
+  width: 100%;
+
+  .container__revists {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .container__revists-left {
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-flow: column;
+    margin-left: 80px;
+
+    .revists__item  {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+      padding: 15px 0;
+      padding-right: 26px;
+
+      &:nth-child(3)  {
+        border-top: 1px solid #E5E5E5;
+      }
+
+
+      .revists__title {
+        color: #000000;
+        font-family: $garamond;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+      .revists__text-wrap {
+        margin-left: 20px;
+        margin-top: 15px;
+        text-align: left;
+
+        .revists-text {
+          color: #000000;
+          font-family: $garamond;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 18px;
+        }
+        .revists__date  {
+          color: #888888;
+          font-family: $garamond;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 10px;
+          margin-top: 10px;
+        }
+      }
+      .btn-work {
+        height: 50px;
+        width: 140px;
+        background-color: #000000;
+        color: white;
+        padding: 15px;
+        text-decoration: none;
+        text-align: center;
+
+        span {
+          color: #FFFFFF;
+          font-family: $nunito;
+          font-size: 12px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          line-height: 10px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .container__revists-right {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+
+    .revists__content {
+      display: flex;
+      margin: 0 auto;
+      flex-flow: column;
+
+      .revists__text-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 540px;
+        color: #888888;
+        font-family: $nunito;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+
+        .revists-text-title {
+          color: #000000;
+          font-family: $nunito;
+          font-size: 42px;
+          font-weight: bold;
+          line-height: 22px;
+          position: absolute;
+          left: -30px;
+          top: -5px;
+        }
       }
     }
   }
