@@ -1139,6 +1139,8 @@ input {
   max-width: 540px;
   margin: 0 auto;
   height: auto;
+  border-bottom: 1px solid;
+  padding-bottom: 80px;
 }
 .contact .container__contact-us .title__contact {
   color: #000000;
@@ -1161,6 +1163,48 @@ input {
 .contact .container__contact-us .contact__us .container__input .container__input-row label {
   display: block;
   margin-bottom: 12px;
+}
+.contact .container__contact-us .contact__us .container__input .container__input-message {
+  width: 100%;
+  height: auto;
+}
+.contact .container__contact-us .contact__us .container__input .container__input-message label {
+  display: block;
+  margin-bottom: 12px;
+}
+.contact .container__contact-us .contact__us .container__input .input {
+  height: 40px;
+  width: 260px;
+  border: 1px solid #D4D4D4;
+  padding-left: 15px;
+}
+.contact .container__contact-us .contact__us .container__input .input__message {
+  height: 120px;
+  width: 540px;
+  border: 1px solid #D4D4D4;
+  text-align: start;
+}
+.contact .container__contact-us .contact__us .btn {
+  margin-top: 65px;
+}
+.contact .container__contact-us .contact__us .btn .btn-contact {
+  height: 60px;
+  width: 180px;
+  background-color: #000000;
+  color: white;
+  padding: 25px 37px;
+  text-decoration: none;
+  text-align: center;
+}
+.contact .container__contact-us .contact__us .btn .btn-contact span {
+  color: #FFFFFF;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 10px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
