@@ -882,10 +882,12 @@ input {
   width: 100%;
 }
 .revists .container__revists {
-  display: flex;
   flex-flow: row nowrap;
+  position: relative;
+  width: 100%;
 }
 .revists .container__revists-left {
+  position: absolute;
   width: 100%;
   max-width: 280px;
   display: flex;
@@ -898,6 +900,7 @@ input {
   width: 100%;
   padding: 15px 0;
   padding-right: 26px;
+  border-right: 1px solid;
 }
 .revists .container__revists-left .revists__item:nth-child(3) {
   border-top: 1px solid #E5E5E5;
@@ -953,7 +956,8 @@ input {
   flex-flow: column;
   width: 100%;
   border-bottom: 1px solid;
-  max-width: 1440px;
+  max-width: 680px;
+  margin: 0 auto;
 }
 .revists .container__revists-right .revists__content {
   display: flex;
@@ -1124,6 +1128,31 @@ input {
 }
 .related .blog__col:nth-child(3) {
   padding-top: 200px;
+}
+
+.contact {
+  width: 100%;
+  margin-top: 100px;
+}
+.contact .container__contact-us {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  height: auto;
+}
+.contact .container__contact-us .title__contact {
+  color: #000000;
+  font-family: "EB Garamond", serif;
+  font-size: 48px;
+  line-height: 55px;
+}
+.contact .container__contact-us .contact__us {
+  margin-top: 50px;
+}
+.contact .container__contact-us .contact__us .container__input {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

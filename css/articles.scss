@@ -45,11 +45,13 @@
   width: 100%;
 
   .container__revists {
-    display: flex;
     flex-flow: row nowrap;
+    position: relative;
+    width: 100%;
   }
 
   .container__revists-left {
+    position: absolute;
     width: 100%;
     max-width: 280px;
     display: flex;
@@ -62,6 +64,7 @@
       width: 100%;
       padding: 15px 0;
       padding-right: 26px;
+      border-right: 1px solid;
 
       &:nth-child(3)  {
         border-top: 1px solid #E5E5E5;
@@ -124,7 +127,8 @@
     flex-flow: column;
     width: 100%;
     border-bottom: 1px solid;
-    max-width: 1440px;
+    max-width: 680px;
+    margin: 0 auto;
 
     .revists__content {
       display: flex;
