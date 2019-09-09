@@ -21,6 +21,14 @@
         display: flex;
         flex-flow: row nowrap;
         width: 100%;
+        margin-top: 47px;
+        .container__input-row {
+          width: 50%;
+
+          &:nth-child(2)  {
+
+          }
+        }
       }
     }
   }

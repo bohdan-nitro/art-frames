@@ -1153,6 +1153,10 @@ input {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
+  margin-top: 47px;
+}
+.contact .container__contact-us .contact__us .container__input .container__input-row {
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
