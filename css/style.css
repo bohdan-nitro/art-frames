@@ -1158,5 +1158,9 @@ input {
 .contact .container__contact-us .contact__us .container__input .container__input-row {
   width: 50%;
 }
+.contact .container__contact-us .contact__us .container__input .container__input-row label {
+  display: block;
+  margin-bottom: 12px;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -25,6 +25,11 @@
         .container__input-row {
           width: 50%;
 
+          label {
+            display: block;
+            margin-bottom: 12px;
+          }
+
           &:nth-child(2)  {
 
           }
