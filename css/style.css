@@ -1246,6 +1246,7 @@ input {
   font-size: 14px;
   font-weight: 300;
   line-height: 10px;
+  color: #888888;
 }
 .also .container__also .also__content .also__item .also__text:nth-child(3) {
   margin-top: 30px;
@@ -1271,6 +1272,72 @@ input {
   width: 100%;
   display: flex;
   flex-flow: row;
+}
+
+.about_us {
+  width: 100%;
+}
+.about_us .container__about_us {
+  width: 100%;
+  flex-flow: row nowrap;
+  height: auto;
+}
+.about_us .container__about_us .container__about-title {
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 420px;
+}
+.about_us .container__about_us .container__about-title .about__title {
+  color: #000000;
+  font-family: "EB Garamond", serif;
+  font-size: 35px;
+  line-height: 40px;
+  text-align: center;
+}
+.about_us .container__about-content {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 190px;
+  max-width: 1000px;
+}
+.about_us .container__about-content .about-us__content {
+  width: 50%;
+}
+.about_us .container__about-content .about-us__content .about-us__title {
+  color: #000000;
+  font-family: "EB Garamond", serif;
+  font-size: 35px;
+  line-height: 40px;
+  padding-left: 10px;
+}
+.about_us .container__about-content .about-us__content .about-us__subtitle {
+  margin-top: 30px;
+  color: #000000;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  max-width: 360px;
+}
+.about_us .container__about-content .about-us__content .about-us__text {
+  margin-top: 15px;
+  color: #888888;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  max-width: 360px;
+}
+.about_us .about__image {
+  width: 50%;
+}
+.about_us .about__image img {
+  width: 100%;
+  object-fit: cover;
+  max-width: 510px;
 }
 
 /*# sourceMappingURL=style.css.map */
