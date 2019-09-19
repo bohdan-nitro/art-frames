@@ -8,59 +8,62 @@
 </head>
 <body>
 
-<header class=" header__blog">
+<header class="header">
 
     <div class="container">
-
         <div class="header__inner">
-
-            <nav class="nav">
-
-                <a class="nav__link" href="#">
-                    <span class="title">Features</span>
-                </a>
-                <a class="nav__link" href="#">
-                    <span class="title">About</span>
-                </a>
-                <a class="nav__link" href="#">
-                    <span class="title">Company</span>
-                </a>
-                <a class="nav__link" href="#">
-                    <span class="title">Contacts</span>
-                </a>
-                <a class="nav__link logo">
-                    <img class="logo" src="img_blog/logo_icon.svg">
-                </a>
-                <a class="nav__link" href="#">
-                    <span class="title">$USD</span>
-                </a>
-                <a class="nav__link" href="#">
-                    <img class="header__img" src="img_blog/magnifying-glass.svg" height="21" alt="">
-                </a>
-                <a class="nav__link" href="#">
-                    <img class="header__img" src="img_blog/avatar.svg" height="21" alt="">
-                </a>
-                <a class="nav__link" href="#">
-                    <img class="header__img" src="img_blog/shopping-cart.svg" height="24" alt="">
-                </a>
-
-            </nav>
-
+            <div class="navigation">
+                <div class="navigation-container">
+                    <a class="nav__link" href="#">
+                        <span class="title">Features</span>
+                    </a>
+                    <a class="nav__link" href="#">
+                        <span class="title">About</span>
+                    </a>
+                    <a class="nav__link" href="#">
+                        <span class="title">Company</span>
+                    </a>
+                    <a class="nav__link" href="#">
+                        <span class="title">Contacts</span>
+                    </a>
+                </div>
+                <div class="nav__link logo">
+                    <a class="logo" href="index.html">
+                        <img class="logo" src="img/logo_icon1.svg">
+                    </a>
+                </div>
+                <div class="navigation-right">
+                    <a class="nav__link currency" href="#">
+                        <span class="title">$USD</span>
+                    </a>
+                    <a class="nav__link" href="#">
+                        <img src="img/magnifying-glass.svg" height="21" alt="">
+                    </a>
+                    <a class="nav__link" href="#">
+                        <img src="img/avatar.svg" height="21" alt="">
+                    </a>
+                    <a class="nav__link" href="#">
+                        <img src="img/shopping-cart.svg" height="24" alt="">
+                    </a>
+                    <a class="nav__link close" href="#">
+                        <span class="icon"></span>
+                    </a>
+                </div>
+            </div>
         </div>
-
     </div>
 
 </header>
 
 <section class="contact">
 
-    <div class="container__contact-us">
+    <div class="section__container">
 
-        <div class="title__contact">
+        <h2 class="section__title">
             How can we help?
             <br>
             Fill out the the form below.
-        </div>
+        </h2>
 
         <form class="contact__us" action="">
             <div class="container__input">
@@ -105,11 +108,15 @@
 
             <div class="container__input">
 
-                <div class="container__input-row">
+                <div class="container__input-row select">
 
                     <label for="Select_one">Topic</label>
 
-                    <input class="input" type="text" placeholder="Select one" name="Select_one">
+                    <select class="input"   name="Select_one">
+                        <option value="">Select One</option>
+                        <option value="">Hello</option>
+                    </select>
+
 
                 </div>
 
@@ -121,14 +128,14 @@
 
                     <label for="Message">Message</label>
 
-                    <input class="input__message" type="text" placeholder="Write your message here" name="Message">
+                    <textarea class="input input__message" placeholder="Write your message here" name="Message"></textarea>
 
                 </div>
 
             </div>
 
                 <div class="btn">
-                    <a class="btn-contact" href="#"><span>Send Message</span></a>
+                    <button type="submit" class="btn-contact"><span>Send Message</span></button>
                 </div>
 
         </form>
@@ -139,26 +146,26 @@
 
 <section class="also">
 
-    <div class="container__also">
+    <div class="section__container">
 
-        <div class="also__title">
+        <h2 class="section__title">
             Also you can ask your question to us through the:
-        </div>
+        </h2>
 
         <div class="also__content">
 
             <div class="also__item">
 
                 <div class="also__subtitle">Email</div>
-                <div class="also__text">help@zooframe.com</div>
-                <div class="also__text">help@zooframe.com</div>
+                <a class="also__text" href="mailto:help@zooframe.com">help@zooframe.com</a>
+                <a class="also__text" href="mailto:help@zooframe.com">help@zooframe.com</a>
 
             </div>
             <div class="also__item">
 
                 <div class="also__subtitle">Phone</div>
-                <div class="also__text">349-514-6163</div>
-                <div class="also__text">719-597-2693</div>
+                <a class="also__text" href="tel:349-514-6163">349-514-6163</a>
+                <a class="also__text" href="tel:719-597-2693">719-597-2693</a>
 
             </div>
             <div class="also__item">

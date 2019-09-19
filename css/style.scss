@@ -17,6 +17,23 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
+textarea, select {
+  resize: none;
+  outline: none;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+button {
+  border: none;
+}
 
 
 input {
