@@ -80,6 +80,35 @@
             color: #000;
           }
 
+          &.glass {
+            .icon {
+              background-image: url("../img/magnifyng-glass black.svg");
+              height: 20px;
+              width: 20px;
+            }
+          }
+
+          &.cart  {
+            .icon {
+              background-image: url("../img/shopping-cart black.svg");
+              height: 20px;
+              width: 20px;
+            }
+          }
+
+          &.avatar  {
+            .icon {
+              background-image: url("../img/avatar black.svg");
+              height: 20px;
+              width: 20px;
+            }
+          }
+
+          &.close {
+            display: none;
+          }
+
+
         }
 
       }
@@ -104,10 +133,38 @@
               color: #FFFFFF;
             }
 
+            &.glass {
+              .icon {
+                background-image: url("../img/magnifying-glass.svg");
+                height: 20px;
+                width: 20px;
+              }
+            }
+
+            &.cart  {
+              .icon {
+                background-image: url("../img/shopping-cart.svg");
+                height: 20px;
+                width: 20px;
+              }
+            }
+
+            &.avatar  {
+              .icon {
+                background-image: url("../img/avatar.svg");
+                height: 20px;
+                width: 20px;
+              }
+            }
+
+            &.close {
+              display: none;
+            }
+
+
           }
 
         }
-
       }
     }
   }
@@ -475,6 +532,7 @@
       }
 
       .btn-work {
+        display: inline;
         height: 50px;
         width: 140px;
         background-color: #000000;
@@ -759,6 +817,9 @@
   }
 }
 
+.black  {
+  text-decoration: black;
+}
 
 @media screen and (max-width: 1024px) {
 
@@ -826,8 +887,11 @@
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 720px) {
-
+@media screen and (max-width: 720px) {
+  h2, h3 {
+    font-size: 24px;
+    font-weight: normal;
+  }
   .header {
     height: 70px;
 
@@ -848,6 +912,7 @@
 
             .nav__link {
               margin-left: 10px;
+
             }
 
           }
@@ -857,30 +922,30 @@
             height: 40px;
             width: 40px;
 
+            &.close {
+              display: flex;
+              .icon {
+                display: block;
+                background-image: url("../img/close-black.svg");
+                width: 15px;
+                height: 15px;
+              }
+            }
+
             &.currency {
               display: none;
             }
 
-            &.close {
+            &.glass {
               .icon {
-                background-image: url("../img/close-black.svg");
+                background-image: url("../img/magnifyng-glass black.svg");
                 width: 15px;
                 height: 15px;
-
-                &.glass {
-                  background-image: url("../img/magnifyng-glass black.svg");
-                  width: 15px;
-                  height: 15px;
-                }
               }
             }
-
           }
-
         }
-
       }
-
     }
 
     &.white {
@@ -892,18 +957,26 @@
               .nav__link {
 
                 &.close {
+                  display: flex;
+                  height: 40px;
+                  width: 40px;
+                  border: none;
+                  margin-left: 10px;
                   .icon {
+                    display: block;
                     background-image: url("../img/close.svg");
+                    height: 15px;
+                    width: 15px;
                   }
 
               }
                 &.glass {
-                  .icon_glass {
+                  .icon {
                     background-image: url("../img/magnifying-glass.svg");
                   }
                 }
                 &.cart  {
-                  .icon_cart {
+                  .icon {
                     background-image: url("../img/shopping-cart.svg");
                   }
                 }

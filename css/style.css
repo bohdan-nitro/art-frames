@@ -110,6 +110,24 @@ input {
   font-family: "Nunito Sans", sans-serif;
   color: #000;
 }
+.header .container .header__inner .navigation .nav__link.glass .icon {
+  background-image: url("../img/magnifyng-glass black.svg");
+  height: 20px;
+  width: 20px;
+}
+.header .container .header__inner .navigation .nav__link.cart .icon {
+  background-image: url("../img/shopping-cart black.svg");
+  height: 20px;
+  width: 20px;
+}
+.header .container .header__inner .navigation .nav__link.avatar .icon {
+  background-image: url("../img/avatar black.svg");
+  height: 20px;
+  width: 20px;
+}
+.header .container .header__inner .navigation .nav__link.close {
+  display: none;
+}
 .header.white {
   position: absolute;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -117,6 +135,24 @@ input {
 }
 .header.white .container .header__inner .navigation .nav__link .title {
   color: #FFFFFF;
+}
+.header.white .container .header__inner .navigation .nav__link.glass .icon {
+  background-image: url("../img/magnifying-glass.svg");
+  height: 20px;
+  width: 20px;
+}
+.header.white .container .header__inner .navigation .nav__link.cart .icon {
+  background-image: url("../img/shopping-cart.svg");
+  height: 20px;
+  width: 20px;
+}
+.header.white .container .header__inner .navigation .nav__link.avatar .icon {
+  background-image: url("../img/avatar.svg");
+  height: 20px;
+  width: 20px;
+}
+.header.white .container .header__inner .navigation .nav__link.close {
+  display: none;
 }
 
 .footer {
@@ -433,6 +469,7 @@ input {
   margin-top: 10px;
 }
 .works .works-container .works__content .btn-work {
+  display: inline;
   height: 50px;
   width: 140px;
   background-color: #000000;
@@ -680,6 +717,10 @@ input {
   text-transform: uppercase;
 }
 
+.black {
+  text-decoration: black;
+}
+
 @media screen and (max-width: 1024px) {
   .intro .container {
     max-width: 840px;
@@ -716,7 +757,12 @@ input {
     padding: 0 50px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 720px) {
+@media screen and (max-width: 720px) {
+  h2, h3 {
+    font-size: 24px;
+    font-weight: normal;
+  }
+
   .header {
     height: 70px;
   }
@@ -738,26 +784,40 @@ input {
     height: 40px;
     width: 40px;
   }
-  .header .container .header__inner .navigation .nav__link.currency {
-    display: none;
+  .header .container .header__inner .navigation .nav__link.close {
+    display: flex;
   }
   .header .container .header__inner .navigation .nav__link.close .icon {
+    display: block;
     background-image: url("../img/close-black.svg");
     width: 15px;
     height: 15px;
   }
-  .header .container .header__inner .navigation .nav__link.close .icon.glass {
+  .header .container .header__inner .navigation .nav__link.currency {
+    display: none;
+  }
+  .header .container .header__inner .navigation .nav__link.glass .icon {
     background-image: url("../img/magnifyng-glass black.svg");
     width: 15px;
     height: 15px;
   }
-  .header.white .container .header__inner .navigation .navigation-right .nav__link.close .icon {
-    background-image: url("../img/close.svg");
+  .header.white .container .header__inner .navigation .navigation-right .nav__link.close {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin-left: 10px;
   }
-  .header.white .container .header__inner .navigation .navigation-right .nav__link.glass .icon_glass {
+  .header.white .container .header__inner .navigation .navigation-right .nav__link.close .icon {
+    display: block;
+    background-image: url("../img/close.svg");
+    height: 15px;
+    width: 15px;
+  }
+  .header.white .container .header__inner .navigation .navigation-right .nav__link.glass .icon {
     background-image: url("../img/magnifying-glass.svg");
   }
-  .header.white .container .header__inner .navigation .navigation-right .nav__link.cart .icon_cart {
+  .header.white .container .header__inner .navigation .navigation-right .nav__link.cart .icon {
     background-image: url("../img/shopping-cart.svg");
   }
 
@@ -1173,7 +1233,7 @@ input {
     position: absolute;
   }
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 720px) {
   .our__blog .blog__container {
     padding-top: 50px;
   }
@@ -1247,6 +1307,7 @@ input {
 }
 
 .revists {
+  margin-top: 80px;
   width: 100%;
 }
 .revists .container__revists {
@@ -1508,11 +1569,10 @@ input {
   }
 
   .revists .container__revists .container__revists-left {
-    margin-left: 25px;
+    display: none;
   }
   .revists .container__revists .container__revists-right {
-    max-width: 775px;
-    padding-left: 230px;
+    width: 100%;
   }
 
   .related .container__related {
@@ -1539,8 +1599,11 @@ input {
     position: absolute;
   }
 }
-@media screen and (min-width: 320px) {
-  .intro .container__intro .articles__date {
+@media screen and (max-width: 720px) {
+  .intro_articles .container__intro {
+    margin-top: 140px;
+  }
+  .intro_articles .container__intro .articles__date {
     color: #888888;
     font-family: "EB Garamond", serif;
     font-size: 16px;
@@ -1548,26 +1611,25 @@ input {
     letter-spacing: 1px;
     line-height: 12px;
   }
-  .intro .container__intro .articles__title {
-    color: #000000;
+  .intro_articles .container__intro .articles__title {
     font-family: "EB Garamond", serif;
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
     text-align: center;
   }
-  .intro .container__intro .articles__photo {
+  .intro_articles .container__intro .articles__photo {
     height: 100%;
     width: 100%;
   }
-  .intro .container__intro .articles__photo img {
+  .intro_articles .container__intro .articles__photo img {
     width: 100%;
     object-fit: cover;
     height: 520px;
   }
 
   .revists {
-    margin-top: 50px;
+    margin-top: 75px;
   }
   .revists .container__revists .container__revists-left {
     display: none;
@@ -1868,7 +1930,7 @@ h2.section__title {
 }
 .about_us .container__about_us .container__about-title {
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 160px;
   display: flex;
   flex-flow: row nowrap;
   max-width: 420px;
@@ -2064,7 +2126,7 @@ h2.section__title {
     max-height: 190px;
   }
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 720px) {
   .about_us {
     width: 100%;
   }

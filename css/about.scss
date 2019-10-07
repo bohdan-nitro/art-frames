@@ -8,7 +8,7 @@
 
     .container__about-title {
       margin: 0 auto;
-      margin-top: 80px;
+      margin-top: 160px;
       display: flex;
       flex-flow: row nowrap;
       max-width: 420px;
@@ -242,7 +242,7 @@
 
 }
 
-@media screen and (min-width: 320px)  {
+@media screen and (max-width: 720px)  {
 
   .about_us {
     width: 100%;
