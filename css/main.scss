@@ -341,7 +341,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.6);
     z-index: 1;
   }
 
@@ -883,8 +883,7 @@
   .works {
     .works-container {
       .works__content {
-        padding-left: 50px;
-        padding-right: 0;
+        padding: 0 50px;
 
         .btn-work {
           display: inline;

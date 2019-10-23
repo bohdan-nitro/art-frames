@@ -243,7 +243,7 @@ input {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1; }
   .intro .container {
     display: flex;
@@ -639,8 +639,7 @@ input {
     margin-bottom: 100px; }
 
   .works .works-container .works__content {
-    padding-left: 50px;
-    padding-right: 0; }
+    padding: 0 50px; }
     .works .works-container .works__content .btn-work {
       display: inline; }
 
