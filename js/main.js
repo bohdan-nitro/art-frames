@@ -11,17 +11,19 @@ $(document).ready(function () {
             $(headerWrap).removeClass('white');
             $(this).on(function () {
                $(this).fadeIn(500, function () {
-                   $(this).attr('src', 'logo_icon.svg').fadeIn(500);
+
                    console.log(headerWrap);
                });
             });
 
         } else {
             $(headerWrap).addClass('white');
+
         }
 
         $('span').on(function () {
             $(this).toggleClass('black');
+            $(this).toggle("src", "../img/logo_icon.svg");
         });
 
     });

@@ -68,9 +68,21 @@
         padding-right: 26px;
         border-right: 1px solid;
 
+        &:nth-child(2)  {
+          img {
+            width: 100%;
+            max-width: 175px;
+          }
+        }
+
 
         &:nth-child(3) {
           border-top: 1px solid #E5E5E5;
+          width: 100%;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
         }
 
 
