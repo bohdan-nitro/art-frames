@@ -380,7 +380,7 @@
 		}
 
 		$colorpicker = $( '#color-picker' );
-		$stylesheet = $( '#colors-css' );
+		$stylesheet = $( '#colors-scss' );
 		user_id = $( 'input#user_id' ).val();
 		current_user_id = $( 'input[name="checkuser_id"]' ).val();
 

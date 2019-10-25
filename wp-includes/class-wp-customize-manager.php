@@ -5628,7 +5628,7 @@ final class WP_Customize_Manager {
 					'label'       => __( 'CSS code' ),
 					'section'     => 'custom_css',
 					'settings'    => array( 'default' => $custom_css_setting->id ),
-					'code_type'   => 'text/css',
+					'code_type'   => 'text/scss',
 					'input_attrs' => array(
 						'aria-describedby' => 'editor-keyboard-trap-help-1 editor-keyboard-trap-help-2 editor-keyboard-trap-help-3 editor-keyboard-trap-help-4',
 					),

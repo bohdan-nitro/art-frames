@@ -14,7 +14,7 @@ class Akismet_Widget extends WP_Widget {
 		);
 
 		if ( is_active_widget( false, false, $this->id_base ) ) {
-			add_action( 'wp_head', array( $this, 'css' ) );
+			add_action( 'wp_head', array( $this, 'scss' ) );
 		}
 	}
 

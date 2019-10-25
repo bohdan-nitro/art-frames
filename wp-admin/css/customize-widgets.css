@@ -229,7 +229,7 @@
  * Styles for new widget addition panel
  */
 
-/* override widgets admin page rules in wp-admin/css/widgets.css */
+/* override widgets admin page rules in wp-admin/scss/widgets.scss */
 #widgets-left #available-widgets .widget {
 	float: none !important;
 	width: auto !important;

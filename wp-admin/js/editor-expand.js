@@ -910,7 +910,7 @@
 			// Adjust when entering or exiting fullscreen mode.
 			fullscreen && fullscreen.pubsub.unsubscribe( 'hidden', fullscreenHide );
 
-			// Reset all css
+			// Reset all scss
 			$.each( [ $visualTop, $textTop, $tools, $menuBar, $bottom, $statusBar, $contentWrap, $visualEditor, $textEditor, $sideSortables ], function( i, element ) {
 				element && element.attr( 'style', '' );
 			});

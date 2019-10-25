@@ -1031,7 +1031,7 @@ switch ( $action ) {
 				$errors->add( 'newpass', __( 'Check your email for your new password.' ), 'message' );
 			} elseif ( isset( $_GET['checkemail'] ) && 'registered' == $_GET['checkemail'] ) {
 				$errors->add( 'registered', __( 'Registration complete. Please check your email.' ), 'message' );
-			} elseif ( strpos( $redirect_to, 'about.php?updated' ) ) {
+			} elseif ( strpos( $redirect_to, 'page-about.php?updated' ) ) {
 				$errors->add( 'updated', __( '<strong>You have successfully updated WordPress!</strong> Please log back in to see what&#8217;s new.' ), 'message' );
 			} elseif ( WP_Recovery_Mode_Link_Service::LOGIN_ACTION_ENTERED === $action ) {
 				$errors->add( 'enter_recovery_mode', __( 'Recovery Mode Initialized. Please log in to continue.' ), 'message' );

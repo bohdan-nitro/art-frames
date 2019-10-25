@@ -3219,7 +3219,7 @@ p > object:only-child {
 19.0 Media Queries
 --------------------------------------------------------------*/
 
-/* Adjust positioning of edit shortcuts, override style in customize-preview.css */
+/* Adjust positioning of edit shortcuts, override style in customize-preview.scss */
 @media screen and (min-width: 20em) {
 
 	body.customize-partial-edit-shortcuts-shown .site-header .site-title {

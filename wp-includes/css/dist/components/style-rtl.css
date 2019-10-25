@@ -386,7 +386,7 @@
     background: none;
     outline: none;
     text-align: right;
-    /* Mimics the default link style in common.css */
+    /* Mimics the default link style in common.scss */
     color: #0073aa;
     text-decoration: underline;
     transition-property: border, background, color;

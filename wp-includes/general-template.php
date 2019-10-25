@@ -3333,8 +3333,8 @@ function wp_enqueue_code_editor( $args ) {
 
 		if ( ! empty( $settings['codemirror']['lint'] ) ) {
 			switch ( $mode['name'] ) {
-				case 'css':
-				case 'text/css':
+				case 'scss':
+				case 'text/scss':
 				case 'text/x-scss':
 				case 'text/x-less':
 					wp_enqueue_script( 'csslint' );
@@ -3495,8 +3495,8 @@ function wp_get_code_editor_settings( $args ) {
 				case 'conf':
 					$type = 'text/nginx';
 					break;
-				case 'css':
-					$type = 'text/css';
+				case 'scss':
+					$type = 'text/scss';
 					break;
 				case 'diff':
 				case 'patch':
@@ -3564,11 +3564,11 @@ function wp_get_code_editor_settings( $args ) {
 		}
 	}
 
-	if ( 'text/css' === $type ) {
+	if ( 'text/scss' === $type ) {
 		$settings['codemirror'] = array_merge(
 			$settings['codemirror'],
 			array(
-				'mode'              => 'css',
+				'mode'              => 'scss',
 				'lint'              => true,
 				'autoCloseBrackets' => true,
 				'matchBrackets'     => true,
@@ -4077,11 +4077,11 @@ function paginate_links( $args = '' ) {
 }
 
 /**
- * Registers an admin color scheme css file.
+ * Registers an admin color scheme scss file.
  *
  * Allows a plugin to register a new admin color scheme. For example:
  *
- *     wp_admin_css_color( 'classic', __( 'Classic' ), admin_url( "css/colors-classic.css" ), array(
+ *     wp_admin_css_color( 'classic', __( 'Classic' ), admin_url( "scss/colors-classic.scss" ), array(
  *         '#07273E', '#14568A', '#D54E21', '#2683AE'
  *     ) );
  *
@@ -4151,7 +4151,7 @@ function register_admin_color_schemes() {
 	wp_admin_css_color(
 		'light',
 		_x( 'Light', 'admin color scheme' ),
-		admin_url( "css/colors/light/colors$suffix.css" ),
+		admin_url( "scss/colors/light/colors$suffix.scss" ),
 		array( '#e5e5e5', '#999', '#d64e07', '#04a4cc' ),
 		array(
 			'base'    => '#999',
@@ -4163,7 +4163,7 @@ function register_admin_color_schemes() {
 	wp_admin_css_color(
 		'blue',
 		_x( 'Blue', 'admin color scheme' ),
-		admin_url( "css/colors/blue/colors$suffix.css" ),
+		admin_url( "scss/colors/blue/colors$suffix.scss" ),
 		array( '#096484', '#4796b3', '#52accc', '#74B6CE' ),
 		array(
 			'base'    => '#e5f8ff',
@@ -4175,7 +4175,7 @@ function register_admin_color_schemes() {
 	wp_admin_css_color(
 		'midnight',
 		_x( 'Midnight', 'admin color scheme' ),
-		admin_url( "css/colors/midnight/colors$suffix.css" ),
+		admin_url( "scss/colors/midnight/colors$suffix.scss" ),
 		array( '#25282b', '#363b3f', '#69a8bb', '#e14d43' ),
 		array(
 			'base'    => '#f1f2f3',
@@ -4187,7 +4187,7 @@ function register_admin_color_schemes() {
 	wp_admin_css_color(
 		'sunrise',
 		_x( 'Sunrise', 'admin color scheme' ),
-		admin_url( "css/colors/sunrise/colors$suffix.css" ),
+		admin_url( "scss/colors/sunrise/colors$suffix.scss" ),
 		array( '#b43c38', '#cf4944', '#dd823b', '#ccaf0b' ),
 		array(
 			'base'    => '#f3f1f1',
@@ -4199,7 +4199,7 @@ function register_admin_color_schemes() {
 	wp_admin_css_color(
 		'ectoplasm',
 		_x( 'Ectoplasm', 'admin color scheme' ),
-		admin_url( "css/colors/ectoplasm/colors$suffix.css" ),
+		admin_url( "scss/colors/ectoplasm/colors$suffix.scss" ),
 		array( '#413256', '#523f6d', '#a3b745', '#d46f15' ),
 		array(
 			'base'    => '#ece6f6',
@@ -4211,7 +4211,7 @@ function register_admin_color_schemes() {
 	wp_admin_css_color(
 		'ocean',
 		_x( 'Ocean', 'admin color scheme' ),
-		admin_url( "css/colors/ocean/colors$suffix.css" ),
+		admin_url( "scss/colors/ocean/colors$suffix.scss" ),
 		array( '#627c83', '#738e96', '#9ebaa0', '#aa9d88' ),
 		array(
 			'base'    => '#f2fcff',
@@ -4223,7 +4223,7 @@ function register_admin_color_schemes() {
 	wp_admin_css_color(
 		'coffee',
 		_x( 'Coffee', 'admin color scheme' ),
-		admin_url( "css/colors/coffee/colors$suffix.css" ),
+		admin_url( "scss/colors/coffee/colors$suffix.scss" ),
 		array( '#46403c', '#59524c', '#c7a589', '#9ea476' ),
 		array(
 			'base'    => '#f3f2f1',
@@ -4241,14 +4241,14 @@ function register_admin_color_schemes() {
  *
  * @since 2.3.0
  *
- * @param string $file file relative to wp-admin/ without its ".css" extension.
+ * @param string $file file relative to wp-admin/ without its ".scss" extension.
  * @return string
  */
 function wp_admin_css_uri( $file = 'wp-admin' ) {
 	if ( defined( 'WP_INSTALLING' ) ) {
-		$_file = "./$file.css";
+		$_file = "./$file.scss";
 	} else {
-		$_file = admin_url( "$file.css" );
+		$_file = admin_url( "$file.scss" );
 	}
 	$_file = add_query_arg( 'version', get_bloginfo( 'version' ), $_file );
 
@@ -4258,7 +4258,7 @@ function wp_admin_css_uri( $file = 'wp-admin' ) {
 	 * @since 2.3.0
 	 *
 	 * @param string $_file Relative path to the file with query arguments attached.
-	 * @param string $file  Relative path to the file, minus its ".css" extension.
+	 * @param string $file  Relative path to the file, minus its ".scss" extension.
 	 */
 	return apply_filters( 'wp_admin_css_uri', $_file, $file );
 }
@@ -4274,18 +4274,18 @@ function wp_admin_css_uri( $file = 'wp-admin' ) {
  *
  * For backward compatibility with WordPress 2.3 calling method: If the $file
  * (first) parameter does not correspond to a registered CSS file, we assume
- * $file is a file relative to wp-admin/ without its ".css" extension. A
+ * $file is a file relative to wp-admin/ without its ".scss" extension. A
  * stylesheet link to that generated URL is printed.
  *
  * @since 2.3.0
  *
- * @param string $file       Optional. Style handle name or file name (without ".css" extension) relative
+ * @param string $file       Optional. Style handle name or file name (without ".scss" extension) relative
  *                           to wp-admin/. Defaults to 'wp-admin'.
  * @param bool   $force_echo Optional. Force the stylesheet link to be printed rather than enqueued.
  */
 function wp_admin_css( $file = 'wp-admin', $force_echo = false ) {
 	// For backward compatibility
-	$handle = 0 === strpos( $file, 'css/' ) ? substr( $file, 4 ) : $file;
+	$handle = 0 === strpos( $file, 'scss/' ) ? substr( $file, 4 ) : $file;
 
 	if ( wp_styles()->query( $handle ) ) {
 		if ( $force_echo || did_action( 'wp_print_styles' ) ) { // we already printed the style queue. Print this one immediately
@@ -4304,19 +4304,19 @@ function wp_admin_css( $file = 'wp-admin', $force_echo = false ) {
 	 *
 	 * @since 2.3.0
 	 * @param string $stylesheet_link HTML link element for the stylesheet.
-	 * @param string $file            Style handle name or filename (without ".css" extension)
+	 * @param string $file            Style handle name or filename (without ".scss" extension)
 	 *                                relative to wp-admin/. Defaults to 'wp-admin'.
 	 */
-	echo apply_filters( 'wp_admin_css', "<link rel='stylesheet' href='" . esc_url( wp_admin_css_uri( $file ) ) . "' type='text/css' />\n", $file );
+	echo apply_filters( 'wp_admin_css', "<link rel='stylesheet' href='" . esc_url( wp_admin_css_uri( $file ) ) . "' type='text/scss' />\n", $file );
 
 	if ( function_exists( 'is_rtl' ) && is_rtl() ) {
 		/** This filter is documented in wp-includes/general-template.php */
-		echo apply_filters( 'wp_admin_css', "<link rel='stylesheet' href='" . esc_url( wp_admin_css_uri( "$file-rtl" ) ) . "' type='text/css' />\n", "$file-rtl" );
+		echo apply_filters( 'wp_admin_css', "<link rel='stylesheet' href='" . esc_url( wp_admin_css_uri( "$file-rtl" ) ) . "' type='text/scss' />\n", "$file-rtl" );
 	}
 }
 
 /**
- * Enqueues the default ThickBox js and css.
+ * Enqueues the default ThickBox js and scss.
  *
  * If any of the settings need to be changed, this can be done with another js
  * file similar to media-upload.js. That file should

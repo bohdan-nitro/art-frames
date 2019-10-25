@@ -1816,7 +1816,7 @@ function gallery_shortcode( $attr ) {
 	 */
 	if ( apply_filters( 'use_default_gallery_style', ! $html5 ) ) {
 		$gallery_style = "
-		<style type='text/css'>
+		<style type='text/scss'>
 			#{$selector} {
 				margin: auto;
 			}
@@ -4098,8 +4098,8 @@ function attachment_url_to_postid( $url ) {
  */
 function wpview_media_sandbox_styles() {
 	$version        = 'ver=' . get_bloginfo( 'version' );
-	$mediaelement   = includes_url( "js/mediaelement/mediaelementplayer-legacy.min.css?$version" );
-	$wpmediaelement = includes_url( "js/mediaelement/wp-mediaelement.css?$version" );
+	$mediaelement   = includes_url( "js/mediaelement/mediaelementplayer-legacy.min.scss?$version" );
+	$wpmediaelement = includes_url( "js/mediaelement/wp-mediaelement.scss?$version" );
 
 	return array( $mediaelement, $wpmediaelement );
 }

@@ -169,8 +169,8 @@ if ( ! $max_upload_size ) {
 // Editor Styles.
 $styles = array(
 	array(
-		'css' => file_get_contents(
-			ABSPATH . WPINC . '/css/dist/editor/editor-styles.css'
+		'scss' => file_get_contents(
+			ABSPATH . WPINC . '/scss/dist/editor/editor-styles.scss'
 		),
 	),
 );
@@ -178,7 +178,7 @@ $styles = array(
 /* Translators: Use this to specify the CSS font family for the default font */
 $locale_font_family = esc_html_x( 'Noto Serif', 'CSS Font Family for Editor Font' );
 $styles[]           = array(
-	'css' => "body { font-family: '$locale_font_family' }",
+	'scss' => "body { font-family: '$locale_font_family' }",
 );
 
 if ( $editor_styles && current_theme_supports( 'editor-styles' ) ) {
@@ -187,14 +187,14 @@ if ( $editor_styles && current_theme_supports( 'editor-styles' ) ) {
 			$response = wp_remote_get( $style );
 			if ( ! is_wp_error( $response ) ) {
 				$styles[] = array(
-					'css' => wp_remote_retrieve_body( $response ),
+					'scss' => wp_remote_retrieve_body( $response ),
 				);
 			}
 		} else {
 			$file = get_theme_file_path( $style );
 			if ( is_file( $file ) ) {
 				$styles[] = array(
-					'css'     => file_get_contents( $file ),
+					'scss'     => file_get_contents( $file ),
 					'baseURL' => get_theme_file_uri( $style ),
 				);
 			}

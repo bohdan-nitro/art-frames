@@ -50,15 +50,15 @@ $wp_file_descriptions = array(
 	'header-embed.php'      => __( 'Embed Header Template' ),
 	'footer-embed.php'      => __( 'Embed Footer Template' ),
 	// Stylesheets
-	'style.css'             => __( 'Stylesheet' ),
-	'editor-style.css'      => __( 'Visual Editor Stylesheet' ),
-	'editor-style-rtl.css'  => __( 'Visual Editor RTL Stylesheet' ),
-	'rtl.css'               => __( 'RTL Stylesheet' ),
+	'style.scss'             => __( 'Stylesheet' ),
+	'editor-style.scss'      => __( 'Visual Editor Stylesheet' ),
+	'editor-style-rtl.scss'  => __( 'Visual Editor RTL Stylesheet' ),
+	'rtl.scss'               => __( 'RTL Stylesheet' ),
 	// Other
 	'my-hacks.php'          => __( 'my-hacks.php (legacy hacks support)' ),
 	'.htaccess'             => __( '.htaccess (for rewrite rules )' ),
 	// Deprecated files
-	'wp-layout.css'         => __( 'Stylesheet' ),
+	'wp-layout.scss'         => __( 'Stylesheet' ),
 	'wp-comments.php'       => __( 'Comments Template' ),
 	'wp-comments-popup.php' => __( 'Popup Comments Template' ),
 	'comments-popup.php'    => __( 'Popup Comments' ),
@@ -184,7 +184,7 @@ function wp_get_plugin_file_editable_extensions( $plugin ) {
 	$editable_extensions = array(
 		'bash',
 		'conf',
-		'css',
+		'scss',
 		'diff',
 		'htm',
 		'html',
@@ -241,7 +241,7 @@ function wp_get_theme_file_editable_extensions( $theme ) {
 	$default_types = array(
 		'bash',
 		'conf',
-		'css',
+		'scss',
 		'diff',
 		'htm',
 		'html',
@@ -434,9 +434,9 @@ function wp_edit_theme_plugin_file( $args ) {
 				case 'php':
 					$allowed_files = array_merge( $allowed_files, $theme->get_files( 'php', -1 ) );
 					break;
-				case 'css':
-					$style_files                = $theme->get_files( 'css', -1 );
-					$allowed_files['style.css'] = $style_files['style.css'];
+				case 'scss':
+					$style_files                = $theme->get_files( 'scss', -1 );
+					$allowed_files['style.scss'] = $style_files['style.scss'];
 					$allowed_files              = array_merge( $allowed_files, $style_files );
 					break;
 				default:
@@ -2315,7 +2315,7 @@ function wp_privacy_generate_personal_data_export_file( $request_id ) {
 	// Head.
 	fwrite( $file, "<head>\n" );
 	fwrite( $file, "<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\n" );
-	fwrite( $file, "<style type='text/css'>" );
+	fwrite( $file, "<style type='text/scss'>" );
 	fwrite( $file, 'body { color: black; font-family: Arial, sans-serif; font-size: 11pt; margin: 15px auto; width: 860px; }' );
 	fwrite( $file, 'table { background: #f0f0f0; border: 1px solid #ddd; margin-bottom: 20px; width: 100%; }' );
 	fwrite( $file, 'th { padding: 5px; text-align: left; width: 20%; }' );

@@ -1,59 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shadowbox</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+
+<?php wp_head(); ?>
+
 <body>
 
-<header class="header white" data-variable="10">
-
-    <div class="container">
-        <div class="header__inner">
-            <div class="navigation">
-                <div class="navigation-container">
-                    <a class="nav__link" href="articles.html">
-                        <span class="title">Articles</span>
-                    </a>
-                    <a class="nav__link" href="about.html">
-                        <span class="title">About</span>
-                    </a>
-                    <a class="nav__link" href="blog.html">
-                        <span class="title">Blog</span>
-                    </a>
-                    <a class="nav__link" href="contacts.html">
-                        <span class="title">Contacts</span>
-                    </a>
-                </div>
-                <div class="nav__link logo">
-                    <a class="logo__link" href="index.php">
-                        <div class="logo-img"></div>
-                    </a>
-                </div>
-                <div class="navigation-right">
-                    <a class="nav__link currency" href="#">
-                        <span class="title">$USD</span>
-                    </a>
-                    <a class="nav__link glass" href="#">
-                        <span class="icon"></span>
-                    </a>
-                    <a class="nav__link avatar" href="#">
-                        <span class="icon"></span>
-                    </a>
-                    <a class="nav__link cart" href="#">
-                        <span class="icon"></span>
-                    </a>
-                    <a class="nav__link close" href="#">
-                        <span class="icon"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</header>
+<?php get_header(); ?>
 
 <section class="intro">
     <img class="intro__image" src="img/intro5.jpg">
@@ -248,7 +200,7 @@
                 are all about great design and others offer quality development, we strive to offer both.
             </div>
 
-            <a class="btn-work" href="about.html">
+            <a class="btn-work" href="page-about.php">
                 <span>Read More</span>
             </a>
 
@@ -315,100 +267,9 @@
 
 </section>
 
-<footer class="footer">
+<?php get_footer(); ?>
 
-    <div class="footer__container">
-
-        <div class="footer__items_container">
-
-            <div class="footer__item first">
-
-                <div class="footer__title">Zoo Frames</div>
-
-                <div class="footer__text">No one chooses to get something framed unless it means the world to them. And
-                    framing our clients’ most valued.
-                </div>
-
-            </div>
-
-            <div class="footer__item second">
-
-                <div class="footer__title">Site Map</div>
-
-                <div class="footer__contact_container">
-
-                    <div class="footer__contact">Products</div>
-                    <div class="footer__contact">About us</div>
-                    <div class="footer__contact">Contacts</div>
-                    <div class="footer__contact">Blog</div>
-
-                </div>
-
-            </div>
-
-            <div class="footer__item third">
-
-                <div class="footer__title">Aditional Info</div>
-
-                <div class="footer__contact_container">
-
-                    <div class="footer__contact">Delivery & Returns</div>
-                    <div class="footer__contact">Help/FAQs</div>
-                    <div class="footer__contact">Meassuring Guide</div>
-                    <div class="footer__contact">Terms & Conditions</div>
-                    <div class="footer__contact">Privacy Policy</div>
-
-                </div>
-
-            </div>
-
-            <div class="footer__item four">
-
-                <div class="footer__title">Social</div>
-
-                <div class="footer__social">
-                    <a class="social" href="#">
-                        <img src="img/facebook_icon.svg" height="15" width="13" alt="">
-                    </a>
-
-                    <a class="social" href="#">
-                        <img src="img/Twitter_icon.svg" height="15" width="13" alt="">
-                    </a>
-
-                    <a class="social" href="#">
-                        <img src="img/instagram_icon.svg" height="15" width="13" alt="">
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="footer__logo">
-            <img src="img/logo_full.svg" alt="">
-        </div>
-
-    </div>
-
-    <div class="subfooter">
-
-        <div class="author__containter">
-
-            <div class="author__text">
-
-                <span>© 2018 Zoo Frames. All rights reserved.</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/main.js"></script>
+<?php wp_footer(); ?>
 
 </body>
 </html>

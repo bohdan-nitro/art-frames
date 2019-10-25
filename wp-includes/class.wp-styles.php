@@ -155,7 +155,7 @@ class WP_Styles extends WP_Dependencies {
 		$inline_style = $this->print_inline_style( $handle, false );
 
 		if ( $inline_style ) {
-			$inline_style_tag = sprintf( "<style id='%s-inline-css' type='text/css'>\n%s\n</style>\n", esc_attr( $handle ), $inline_style );
+			$inline_style_tag = sprintf( "<style id='%s-inline-scss' type='text/scss'>\n%s\n</style>\n", esc_attr( $handle ), $inline_style );
 		} else {
 			$inline_style_tag = '';
 		}
@@ -210,18 +210,18 @@ class WP_Styles extends WP_Dependencies {
 		 * @param string $href   The stylesheet's source URL.
 		 * @param string $media  The stylesheet's media attribute.
 		 */
-		$tag = apply_filters( 'style_loader_tag', "<link rel='$rel' id='$handle-css' $title href='$href' type='text/css' media='$media' />\n", $handle, $href, $media );
+		$tag = apply_filters( 'style_loader_tag', "<link rel='$rel' id='$handle-scss' $title href='$href' type='text/scss' media='$media' />\n", $handle, $href, $media );
 
 		if ( 'rtl' === $this->text_direction && isset( $obj->extra['rtl'] ) && $obj->extra['rtl'] ) {
 			if ( is_bool( $obj->extra['rtl'] ) || 'replace' === $obj->extra['rtl'] ) {
 				$suffix   = isset( $obj->extra['suffix'] ) ? $obj->extra['suffix'] : '';
-				$rtl_href = str_replace( "{$suffix}.css", "-rtl{$suffix}.css", $this->_css_href( $src, $ver, "$handle-rtl" ) );
+				$rtl_href = str_replace( "{$suffix}.scss", "-rtl{$suffix}.scss", $this->_css_href( $src, $ver, "$handle-rtl" ) );
 			} else {
 				$rtl_href = $this->_css_href( $obj->extra['rtl'], $ver, "$handle-rtl" );
 			}
 
 			/** This filter is documented in wp-includes/class.wp-styles.php */
-			$rtl_tag = apply_filters( 'style_loader_tag', "<link rel='$rel' id='$handle-rtl-css' $title href='$rtl_href' type='text/css' media='$media' />\n", $handle, $rtl_href, $media );
+			$rtl_tag = apply_filters( 'style_loader_tag', "<link rel='$rel' id='$handle-rtl-scss' $title href='$rtl_href' type='text/scss' media='$media' />\n", $handle, $rtl_href, $media );
 
 			if ( $obj->extra['rtl'] === 'replace' ) {
 				$tag = $rtl_tag;
@@ -294,7 +294,7 @@ class WP_Styles extends WP_Dependencies {
 			return $output;
 		}
 
-		printf( "<style id='%s-inline-css' type='text/css'>\n%s\n</style>\n", esc_attr( $handle ), $output );
+		printf( "<style id='%s-inline-scss' type='text/scss'>\n%s\n</style>\n", esc_attr( $handle ), $output );
 
 		return true;
 	}

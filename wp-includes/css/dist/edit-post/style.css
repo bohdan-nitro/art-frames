@@ -586,7 +586,7 @@ body.is-fullscreen-mode .edit-post-header {
   position: relative;
   /**
 	 * The wordpress default for most meta-box elements is content-box. Some
-	 * elements such as textarea and input are set to border-box in forms.css.
+	 * elements such as textarea and input are set to border-box in forms.scss.
 	 * These elements therefore specifically set back to border-box here, while
 	 * other elements (such as .button) are unaffected by Gutenberg's style
 	 * because of their higher specificity.

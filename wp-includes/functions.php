@@ -2749,7 +2749,7 @@ function wp_get_mime_types() {
 			'tsv'                          => 'text/tab-separated-values',
 			'ics'                          => 'text/calendar',
 			'rtx'                          => 'text/richtext',
-			'css'                          => 'text/css',
+			'scss'                          => 'text/scss',
 			'htm|html'                     => 'text/html',
 			'vtt'                          => 'text/vtt',
 			'dfxp'                         => 'application/ttaf+xml',
@@ -2855,7 +2855,7 @@ function wp_get_ext_types() {
 			'interactive' => array( 'swf', 'key', 'ppt', 'pptx', 'pptm', 'pps', 'ppsx', 'ppsm', 'sldx', 'sldm', 'odp' ),
 			'text'        => array( 'asc', 'csv', 'tsv', 'txt' ),
 			'archive'     => array( 'bz2', 'cab', 'dmg', 'gz', 'rar', 'sea', 'sit', 'sqx', 'tar', 'tgz', 'zip', '7z' ),
-			'code'        => array( 'css', 'htm', 'html', 'php', 'js' ),
+			'code'        => array( 'scss', 'htm', 'html', 'php', 'js' ),
 		)
 	);
 }

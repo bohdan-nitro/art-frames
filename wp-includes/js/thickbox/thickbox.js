@@ -186,7 +186,7 @@ function tb_show(caption, url, imageGroup) {//function called when the user clic
 			tb_position();
 			jQuery("#TB_load").remove();
 			jQuery("#TB_ImageOff").click(tb_remove);
-			jQuery("#TB_window").css({'visibility':'visible'}); //for safari using css instead of show
+			jQuery("#TB_window").css({'visibility':'visible'}); //for safari using scss instead of show
 			};
 
 			imgPreloader.src = url;

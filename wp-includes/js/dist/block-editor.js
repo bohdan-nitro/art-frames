@@ -1076,9 +1076,9 @@ each(['Width', 'Height'], function (name) {
  得到元素的大小信息
  @param elem
  @param name
- @param {String} [extra]  'padding' : (css width) + padding
- 'border' : (css width) + padding + border
- 'margin' : (css width) + padding + border + margin
+ @param {String} [extra]  'padding' : (scss width) + padding
+ 'border' : (scss width) + padding + border
+ 'margin' : (scss width) + padding + border + margin
  */
 function getWH(elem, name, extra) {
   if (isWindow(elem)) {
@@ -1093,7 +1093,7 @@ function getWH(elem, name, extra) {
   var cssBoxValue = 0;
   if (borderBoxValue == null || borderBoxValue <= 0) {
     borderBoxValue = undefined;
-    // Fall back to computed then un computed css if necessary
+    // Fall back to computed then un computed scss if necessary
     cssBoxValue = getComputedStyleX(elem, name);
     if (cssBoxValue == null || Number(cssBoxValue) < 0) {
       cssBoxValue = elem.style[name] || 0;

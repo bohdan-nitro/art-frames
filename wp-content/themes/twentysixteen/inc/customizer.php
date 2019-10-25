@@ -832,7 +832,7 @@ CSS;
 /**
  * Outputs an Underscore template for generating CSS for the color scheme.
  *
- * The template generates the css dynamically for instant display in the
+ * The template generates the scss dynamically for instant display in the
  * Customizer preview.
  *
  * @since Twenty Sixteen 1.0

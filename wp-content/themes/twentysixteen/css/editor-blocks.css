@@ -173,7 +173,7 @@ Description: Used to style blocks in the editor.
 /* Main column width */
 
 .editor-styles-wrapper {
-	max-width: 100% !important; /* Override where editor-style.css is affecting this */
+	max-width: 100% !important; /* Override where editor-style.scss is affecting this */
 }
 
 .wp-block {

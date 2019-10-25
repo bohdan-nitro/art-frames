@@ -14455,7 +14455,7 @@ var wrap_wrap = function wrap(namespace) {
 
 
 /**
- * Convert css rules.
+ * Convert scss rules.
  *
  * @param {Array} styles CSS rules.
  * @param {string} wrapperClassName Wrapper Class Name.

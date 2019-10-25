@@ -84,9 +84,9 @@ foreach ( $file_types as $type ) {
 			$allowed_files += $theme->get_files( 'php', -1 );
 			$has_templates  = ! empty( $allowed_files );
 			break;
-		case 'css':
-			$style_files                = $theme->get_files( 'css', -1 );
-			$allowed_files['style.css'] = $style_files['style.css'];
+		case 'scss':
+			$style_files                = $theme->get_files( 'scss', -1 );
+			$allowed_files['style.scss'] = $style_files['style.scss'];
 			$allowed_files             += $style_files;
 			break;
 		default:
@@ -95,17 +95,17 @@ foreach ( $file_types as $type ) {
 	}
 }
 
-// Move functions.php and style.css to the top.
+// Move functions.php and style.scss to the top.
 if ( isset( $allowed_files['functions.php'] ) ) {
 	$allowed_files = array( 'functions.php' => $allowed_files['functions.php'] ) + $allowed_files;
 }
-if ( isset( $allowed_files['style.css'] ) ) {
-	$allowed_files = array( 'style.css' => $allowed_files['style.css'] ) + $allowed_files;
+if ( isset( $allowed_files['style.scss'] ) ) {
+	$allowed_files = array( 'style.scss' => $allowed_files['style.scss'] ) + $allowed_files;
 }
 
 if ( empty( $file ) ) {
-	$relative_file = 'style.css';
-	$file          = $allowed_files['style.css'];
+	$relative_file = 'style.scss';
+	$file          = $allowed_files['style.scss'];
 } else {
 	$relative_file = wp_unslash( $file );
 	$file          = $theme->get_stylesheet_directory() . '/' . $relative_file;
@@ -194,7 +194,7 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] ) {
 		<pre><?php echo esc_html( $edit_error->get_error_message() ? $edit_error->get_error_message() : $edit_error->get_error_code() ); ?></pre>
 	</div>
 <?php endif; ?>
-<?php if ( preg_match( '/\.css$/', $file ) ) : ?>
+<?php if ( preg_match( '/\.scss$/', $file ) ) : ?>
 	<div id="message" class="notice-info notice">
 		<p><strong><?php _e( 'Did you know?' ); ?></strong></p>
 		<p>

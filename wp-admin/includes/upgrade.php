@@ -2943,7 +2943,7 @@ function make_site_theme_from_oldschool( $theme_name, $template ) {
 	 */
 	$files = array(
 		'index.php'             => 'index.php',
-		'wp-layout.css'         => 'style.css',
+		'wp-layout.scss'         => 'style.scss',
 		'wp-comments.php'       => 'comments.php',
 		'wp-comments-popup.php' => 'comments-popup.php',
 	);
@@ -2985,7 +2985,7 @@ function make_site_theme_from_oldschool( $theme_name, $template ) {
 				}
 
 				// Update stylesheet references.
-				$line = str_replace( "<?php echo __get_option('siteurl'); ?>/wp-layout.css", "<?php bloginfo('stylesheet_url'); ?>", $line );
+				$line = str_replace( "<?php echo __get_option('siteurl'); ?>/wp-layout.scss", "<?php bloginfo('stylesheet_url'); ?>", $line );
 
 				// Update comments template inclusion.
 				$line = str_replace( "<?php include(ABSPATH . 'wp-comments.php'); ?>", '<?php comments_template(); ?>', $line );
@@ -2999,9 +2999,9 @@ function make_site_theme_from_oldschool( $theme_name, $template ) {
 	// Add a theme header.
 	$header = "/*\nTheme Name: $theme_name\nTheme URI: " . __get_option( 'siteurl' ) . "\nDescription: A theme automatically created by the update.\nVersion: 1.0\nAuthor: Moi\n*/\n";
 
-	$stylelines = file_get_contents( "$site_dir/style.css" );
+	$stylelines = file_get_contents( "$site_dir/style.scss" );
 	if ( $stylelines ) {
-		$f = fopen( "$site_dir/style.css", 'w' );
+		$f = fopen( "$site_dir/style.scss", 'w' );
 
 		fwrite( $f, $header );
 		fwrite( $f, $stylelines );
@@ -3027,7 +3027,7 @@ function make_site_theme_from_default( $theme_name, $template ) {
 	$default_dir = WP_CONTENT_DIR . '/themes/' . WP_DEFAULT_THEME;
 
 	// Copy files from the default theme to the site theme.
-	//$files = array('index.php', 'comments.php', 'comments-popup.php', 'footer.php', 'header.php', 'sidebar.php', 'style.css');
+	//$files = array('index.php', 'comments.php', 'comments-popup.php', 'footer.php', 'header.php', 'sidebar.php', 'style.scss');
 
 	$theme_dir = @ opendir( $default_dir );
 	if ( $theme_dir ) {
@@ -3044,9 +3044,9 @@ function make_site_theme_from_default( $theme_name, $template ) {
 	@closedir( $theme_dir );
 
 	// Rewrite the theme header.
-	$stylelines = explode( "\n", implode( '', file( "$site_dir/style.css" ) ) );
+	$stylelines = explode( "\n", implode( '', file( "$site_dir/style.scss" ) ) );
 	if ( $stylelines ) {
-		$f = fopen( "$site_dir/style.css", 'w' );
+		$f = fopen( "$site_dir/style.scss", 'w' );
 
 		foreach ( $stylelines as $line ) {
 			if ( strpos( $line, 'Theme Name:' ) !== false ) {
@@ -3116,7 +3116,7 @@ function make_site_theme() {
 		return false;
 	}
 
-	if ( file_exists( ABSPATH . 'wp-layout.css' ) ) {
+	if ( file_exists( ABSPATH . 'wp-layout.scss' ) ) {
 		if ( ! make_site_theme_from_oldschool( $theme_name, $template ) ) {
 			// TODO: rm -rf the site theme directory.
 			return false;

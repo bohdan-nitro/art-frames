@@ -434,8 +434,8 @@ var inlite = (function (domGlobals) {
       if (Settings.isSkinDisabled(editor)) {
         done();
       } else {
-        global$2.DOM.styleSheetLoader.load(skinUrl + '/skin.min.css', done);
-        editor.contentCSS.push(skinUrl + '/content.inline.min.css');
+        global$2.DOM.styleSheetLoader.load(skinUrl + '/skin.min.scss', done);
+        editor.contentCSS.push(skinUrl + '/content.inline.min.scss');
       }
     };
     var SkinLoader = { load: load };

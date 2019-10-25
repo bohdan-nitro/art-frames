@@ -1316,7 +1316,7 @@ define("moxie/core/utils/Mime", [
 		"image/tiff,tiff tif," +
 		"text/plain,asc txt text diff log," +
 		"text/html,htm html xhtml," +
-		"text/css,css," +
+		"text/scss,scss," +
 		"text/csv,csv," +
 		"text/rtf,rtf," +
 		"video/mpeg,mpeg mpg mpe m2v," +

@@ -6326,7 +6326,7 @@ Object.keys(isUnitlessNumber).forEach(function (prop) {
 });
 
 /**
- * Convert a value into the proper css writable value. The style name `name`
+ * Convert a value into the proper scss writable value. The style name `name`
  * should be logical (no hyphens), as specified
  * in `CSSProperty.isUnitlessNumber`.
  *
@@ -6436,7 +6436,7 @@ var warnValidStyle = function () {};
     }
 
     warnedForNaNValue = true;
-    warning$1(false, '`NaN` is an invalid value for the `%s` css style property.', name);
+    warning$1(false, '`NaN` is an invalid value for the `%s` scss style property.', name);
   };
 
   var warnStyleValueIsInfinity = function (name, value) {
@@ -6445,7 +6445,7 @@ var warnValidStyle = function () {};
     }
 
     warnedForInfinityValue = true;
-    warning$1(false, '`Infinity` is an invalid value for the `%s` css style property.', name);
+    warning$1(false, '`Infinity` is an invalid value for the `%s` scss style property.', name);
   };
 
   warnValidStyle = function (name, value) {

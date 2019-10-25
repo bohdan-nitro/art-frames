@@ -154,7 +154,7 @@ function wp_nav_menu_setup() {
 			'managenav-menuscolumnshidden',
 			array(
 				0 => 'link-target',
-				1 => 'css-classes',
+				1 => 'scss-classes',
 				2 => 'xfn',
 				3 => 'description',
 				4 => 'title-attribute',
@@ -1068,7 +1068,7 @@ function wp_nav_menu_manage_columns() {
 		'cb'              => '<input type="checkbox" />',
 		'link-target'     => __( 'Link Target' ),
 		'title-attribute' => __( 'Title Attribute' ),
-		'css-classes'     => __( 'CSS Classes' ),
+		'scss-classes'     => __( 'CSS Classes' ),
 		'xfn'             => __( 'Link Relationship (XFN)' ),
 		'description'     => __( 'Description' ),
 	);

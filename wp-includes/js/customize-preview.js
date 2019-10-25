@@ -633,13 +633,13 @@
 		},
 
 		/**
-		 * Preview changes to custom css.
+		 * Preview changes to custom scss.
 		 *
 		 * @param {string} value Custom CSS..
 		 * @returns {void}
 		 */
 		custom_css: function( value ) {
-			$( '#wp-custom-css' ).text( value );
+			$( '#wp-custom-scss' ).text( value );
 		},
 
 		/**
@@ -673,7 +673,7 @@
 				css += 'background-attachment: ' + settings.attachment() + ';';
 			}
 
-			$( '#custom-background-css' ).text( 'body.custom-background { ' + css + ' }' );
+			$( '#custom-background-scss' ).text( 'body.custom-background { ' + css + ' }' );
 		}
 	};
 

@@ -1790,7 +1790,7 @@
 	color: #666;
 }
 
-/* higher specificity than media.css */
+/* higher specificity than media.scss */
 .wp-core-ui.media-modal .image-editor .imgedit-help-toggle,
 .wp-core-ui.media-modal .image-editor .imgedit-help-toggle:hover,
 .wp-core-ui.media-modal .image-editor .imgedit-help-toggle:active {

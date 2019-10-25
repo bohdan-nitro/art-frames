@@ -3534,7 +3534,7 @@ function wp_ajax_parse_media_shortcode() {
 	$styles = wpview_media_sandbox_styles();
 
 	foreach ( $styles as $style ) {
-		$head .= '<link type="text/css" rel="stylesheet" href="' . $style . '">';
+		$head .= '<link type="text/scss" rel="stylesheet" href="' . $style . '">';
 	}
 
 	if ( ! empty( $wp_scripts ) ) {

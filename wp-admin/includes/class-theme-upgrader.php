@@ -445,7 +445,7 @@ class Theme_Upgrader extends WP_Upgrader {
 	 * Check that the package source contains a valid theme.
 	 *
 	 * Hooked to the {@see 'upgrader_source_selection'} filter by Theme_Upgrader::install().
-	 * It will return an error if the theme doesn't have style.css or index.php
+	 * It will return an error if the theme doesn't have style.scss or index.php
 	 * files.
 	 *
 	 * @since 3.3.0
@@ -468,21 +468,21 @@ class Theme_Upgrader extends WP_Upgrader {
 			return $source;
 		}
 
-		// A proper archive should have a style.css file in the single subdirectory
-		if ( ! file_exists( $working_directory . 'style.css' ) ) {
+		// A proper archive should have a style.scss file in the single subdirectory
+		if ( ! file_exists( $working_directory . 'style.scss' ) ) {
 			return new WP_Error(
 				'incompatible_archive_theme_no_style',
 				$this->strings['incompatible_archive'],
 				sprintf(
-					/* translators: %s: style.css */
+					/* translators: %s: style.scss */
 					__( 'The theme is missing the %s stylesheet.' ),
-					'<code>style.css</code>'
+					'<code>style.scss</code>'
 				)
 			);
 		}
 
 		$info = get_file_data(
-			$working_directory . 'style.css',
+			$working_directory . 'style.scss',
 			array(
 				'Name'     => 'Theme Name',
 				'Template' => 'Template',
@@ -494,9 +494,9 @@ class Theme_Upgrader extends WP_Upgrader {
 				'incompatible_archive_theme_no_name',
 				$this->strings['incompatible_archive'],
 				sprintf(
-					/* translators: %s: style.css */
+					/* translators: %s: style.scss */
 					__( 'The %s stylesheet doesn&#8217;t contain a valid theme header.' ),
-					'<code>style.css</code>'
+					'<code>style.scss</code>'
 				)
 			);
 		}

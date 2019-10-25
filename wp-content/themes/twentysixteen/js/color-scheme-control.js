@@ -84,7 +84,7 @@
 
 		css = cssTemplate( colors );
 
-		api.previewer.send( 'update-color-scheme-css', css );
+		api.previewer.send( 'update-color-scheme-scss', css );
 	}
 
 	// Update the CSS whenever a color setting is changed.

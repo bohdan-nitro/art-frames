@@ -1004,17 +1004,17 @@ function print_embed_styles() {
 	<style type="text/css">
 	<?php
 	if ( SCRIPT_DEBUG ) {
-		readfile( ABSPATH . WPINC . '/css/wp-embed-template.css' );
+		readfile( ABSPATH . WPINC . '/scss/wp-embed-template.scss' );
 	} else {
 		/*
 		 * If you're looking at a src version of this file, you'll see an "include"
 		 * statement below. This is used by the `grunt build` process to directly
-		 * include a minified version of wp-oembed-embed.css, instead of using the
+		 * include a minified version of wp-oembed-embed.scss, instead of using the
 		 * readfile() method from above.
 		 *
 		 * If you're looking at a build version of this file, you'll see a string of
 		 * minified CSS. If you need to debug it, please turn on SCRIPT_DEBUG
-		 * and edit wp-embed-template.css directly.
+		 * and edit wp-embed-template.scss directly.
 		 */
 		?>
 			/*! This file is auto-generated */

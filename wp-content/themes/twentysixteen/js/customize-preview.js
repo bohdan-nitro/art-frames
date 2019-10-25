@@ -3,12 +3,12 @@
  */
 
 ( function( $ ) {
-	var style = $( '#twentysixteen-color-scheme-css' ),
+	var style = $( '#twentysixteen-color-scheme-scss' ),
 		api = wp.customize;
 
 	if ( ! style.length ) {
-		style = $( 'head' ).append( '<style type="text/css" id="twentysixteen-color-scheme-css" />' )
-		                    .find( '#twentysixteen-color-scheme-css' );
+		style = $( 'head' ).append( '<style type="text/scss" id="twentysixteen-color-scheme-scss" />' )
+		                    .find( '#twentysixteen-color-scheme-scss' );
 	}
 
 	// Site title.
@@ -34,7 +34,7 @@
 
 	// Color Scheme CSS.
 	api.bind( 'preview-ready', function() {
-		api.preview.bind( 'update-color-scheme-css', function( css ) {
+		api.preview.bind( 'update-color-scheme-scss', function( css ) {
 			style.html( css );
 		} );
 	} );

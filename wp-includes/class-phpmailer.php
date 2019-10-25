@@ -3588,7 +3588,7 @@ class PHPMailer
             'tiff'  => 'image/tiff',
             'tif'   => 'image/tiff',
             'eml'   => 'message/rfc822',
-            'css'   => 'text/css',
+            'scss'   => 'text/scss',
             'html'  => 'text/html',
             'htm'   => 'text/html',
             'shtml' => 'text/html',

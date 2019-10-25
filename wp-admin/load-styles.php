@@ -60,12 +60,12 @@ foreach ( $load as $handle ) {
 
 	if ( $rtl && ! empty( $style->extra['rtl'] ) ) {
 		// All default styles have fully independent RTL files.
-		$path = str_replace( '.min.css', '-rtl.min.css', $path );
+		$path = str_replace( '.min.scss', '-rtl.min.scss', $path );
 	}
 
 	$content = get_file( $path ) . "\n";
 
-	if ( strpos( $style->src, '/' . WPINC . '/css/' ) === 0 ) {
+	if ( strpos( $style->src, '/' . WPINC . '/scss/' ) === 0 ) {
 		$content = str_replace( '../images/', '../' . WPINC . '/images/', $content );
 		$content = str_replace( '../js/tinymce/', '../' . WPINC . '/js/tinymce/', $content );
 		$content = str_replace( '../fonts/', '../' . WPINC . '/fonts/', $content );
@@ -76,7 +76,7 @@ foreach ( $load as $handle ) {
 }
 
 header( "Etag: $wp_version" );
-header( 'Content-Type: text/css; charset=UTF-8' );
+header( 'Content-Type: text/scss; charset=UTF-8' );
 header( 'Expires: ' . gmdate( 'D, d M Y H:i:s', time() + $expires_offset ) . ' GMT' );
 header( "Cache-Control: public, max-age=$expires_offset" );
 

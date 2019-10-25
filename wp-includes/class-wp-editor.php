@@ -823,7 +823,7 @@ final class _WP_Editors {
 
 		self::enqueue_scripts( true );
 
-		// Also add wp-includes/css/editor.css
+		// Also add wp-includes/scss/editor.scss
 		wp_enqueue_style( 'editor-buttons' );
 
 		if ( is_admin() ) {
@@ -1015,8 +1015,8 @@ final class _WP_Editors {
 		$version = 'ver=' . get_bloginfo( 'version' );
 
 		// Default stylesheets
-		$settings['content_css'] = includes_url( "css/dashicons$suffix.css?$version" ) . ',' .
-			includes_url( "js/tinymce/skins/wordpress/wp-content.css?$version" );
+		$settings['content_css'] = includes_url( "scss/dashicons$suffix.scss?$version" ) . ',' .
+			includes_url( "js/tinymce/skins/wordpress/wp-content.scss?$version" );
 
 		return $settings;
 	}

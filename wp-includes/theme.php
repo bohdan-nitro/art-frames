@@ -227,7 +227,7 @@ function get_stylesheet_directory_uri() {
 /**
  * Retrieves the URI of current theme stylesheet.
  *
- * The stylesheet file name is 'style.css' which is appended to the stylesheet directory URI path.
+ * The stylesheet file name is 'style.scss' which is appended to the stylesheet directory URI path.
  * See get_stylesheet_directory_uri().
  *
  * @since 1.5.0
@@ -236,7 +236,7 @@ function get_stylesheet_directory_uri() {
  */
 function get_stylesheet_uri() {
 	$stylesheet_dir_uri = get_stylesheet_directory_uri();
-	$stylesheet_uri     = $stylesheet_dir_uri . '/style.css';
+	$stylesheet_uri     = $stylesheet_dir_uri . '/style.scss';
 	/**
 	 * Filters the URI of the current theme stylesheet.
 	 *
@@ -253,8 +253,8 @@ function get_stylesheet_uri() {
  *
  * The stylesheet directory for the localized stylesheet files are located, by
  * default, in the base theme directory. The name of the locale file will be the
- * locale followed by '.css'. If that does not exist, then the text direction
- * stylesheet will be checked for existence, for example 'ltr.css'.
+ * locale followed by '.scss'. If that does not exist, then the text direction
+ * stylesheet will be checked for existence, for example 'ltr.scss'.
  *
  * The theme may change the location of the stylesheet directory by either using
  * the {@see 'stylesheet_directory_uri'} or {@see 'locale_stylesheet_uri'} filters.
@@ -274,10 +274,10 @@ function get_locale_stylesheet_uri() {
 	$stylesheet_dir_uri = get_stylesheet_directory_uri();
 	$dir                = get_stylesheet_directory();
 	$locale             = get_locale();
-	if ( file_exists( "$dir/$locale.css" ) ) {
-		$stylesheet_uri = "$stylesheet_dir_uri/$locale.css";
-	} elseif ( ! empty( $wp_locale->text_direction ) && file_exists( "$dir/{$wp_locale->text_direction}.css" ) ) {
-		$stylesheet_uri = "$stylesheet_dir_uri/{$wp_locale->text_direction}.css";
+	if ( file_exists( "$dir/$locale.scss" ) ) {
+		$stylesheet_uri = "$stylesheet_dir_uri/$locale.scss";
+	} elseif ( ! empty( $wp_locale->text_direction ) && file_exists( "$dir/{$wp_locale->text_direction}.scss" ) ) {
+		$stylesheet_uri = "$stylesheet_dir_uri/{$wp_locale->text_direction}.scss";
 	} else {
 		$stylesheet_uri = '';
 	}
@@ -472,7 +472,7 @@ function search_theme_directories( $force = false ) {
 					continue;
 				}
 				$found_themes[ $theme_dir ] = array(
-					'theme_file' => $theme_dir . '/style.css',
+					'theme_file' => $theme_dir . '/style.scss',
 					'theme_root' => $relative_theme_roots[ $theme_root ], // Convert relative to absolute.
 				);
 			}
@@ -498,11 +498,11 @@ function search_theme_directories( $force = false ) {
 			if ( ! is_dir( $theme_root . '/' . $dir ) || $dir[0] == '.' || $dir == 'CVS' ) {
 				continue;
 			}
-			if ( file_exists( $theme_root . '/' . $dir . '/style.css' ) ) {
+			if ( file_exists( $theme_root . '/' . $dir . '/style.scss' ) ) {
 				// wp-content/themes/a-single-theme
 				// wp-content/themes is $theme_root, a-single-theme is $dir
 				$found_themes[ $dir ] = array(
-					'theme_file' => $dir . '/style.css',
+					'theme_file' => $dir . '/style.scss',
 					'theme_root' => $theme_root,
 				);
 			} else {
@@ -518,20 +518,20 @@ function search_theme_directories( $force = false ) {
 					if ( ! is_dir( $theme_root . '/' . $dir . '/' . $sub_dir ) || $dir[0] == '.' || $dir == 'CVS' ) {
 						continue;
 					}
-					if ( ! file_exists( $theme_root . '/' . $dir . '/' . $sub_dir . '/style.css' ) ) {
+					if ( ! file_exists( $theme_root . '/' . $dir . '/' . $sub_dir . '/style.scss' ) ) {
 						continue;
 					}
 					$found_themes[ $dir . '/' . $sub_dir ] = array(
-						'theme_file' => $dir . '/' . $sub_dir . '/style.css',
+						'theme_file' => $dir . '/' . $sub_dir . '/style.scss',
 						'theme_root' => $theme_root,
 					);
 					$found_theme                           = true;
 				}
-				// Never mind the above, it's just a theme missing a style.css.
+				// Never mind the above, it's just a theme missing a style.scss.
 				// Return it; WP_Theme will catch the error.
 				if ( ! $found_theme ) {
 					$found_themes[ $dir ] = array(
-						'theme_file' => $dir . '/style.css',
+						'theme_file' => $dir . '/style.scss',
 						'theme_root' => $theme_root,
 					);
 				}
@@ -693,7 +693,7 @@ function locale_stylesheet() {
 	if ( empty( $stylesheet ) ) {
 		return;
 	}
-	echo '<link rel="stylesheet" href="' . $stylesheet . '" type="text/css" media="screen" />';
+	echo '<link rel="stylesheet" href="' . $stylesheet . '" type="text/scss" media="screen" />';
 }
 
 /**
@@ -799,7 +799,7 @@ function switch_theme( $stylesheet ) {
 }
 
 /**
- * Checks that current theme files 'index.php' and 'style.css' exists.
+ * Checks that current theme files 'index.php' and 'style.scss' exists.
  *
  * Does not initially check the default theme, which is the fallback and should always exist.
  * But if it doesn't exist, it'll fall back to the latest core default theme that does exist.
@@ -827,9 +827,9 @@ function validate_current_theme() {
 
 	if ( ! file_exists( get_template_directory() . '/index.php' ) ) {
 		// Invalid.
-	} elseif ( ! file_exists( get_template_directory() . '/style.css' ) ) {
+	} elseif ( ! file_exists( get_template_directory() . '/style.scss' ) ) {
 		// Invalid.
-	} elseif ( is_child_theme() && ! file_exists( get_stylesheet_directory() . '/style.css' ) ) {
+	} elseif ( is_child_theme() && ! file_exists( get_stylesheet_directory() . '/style.scss' ) ) {
 		// Invalid.
 	} else {
 		// Valid.
@@ -1622,7 +1622,7 @@ function _custom_background_cb() {
 	$background = set_url_scheme( get_background_image() );
 
 	// $color is the saved custom color.
-	// A default has to be specified in style.css. It will not be printed here.
+	// A default has to be specified in style.scss. It will not be printed here.
 	$color = get_background_color();
 
 	if ( $color === get_theme_support( 'custom-background', 'default-color' ) ) {
@@ -1631,7 +1631,7 @@ function _custom_background_cb() {
 
 	if ( ! $background && ! $color ) {
 		if ( is_customize_preview() ) {
-			echo '<style type="text/css" id="custom-background-css"></style>';
+			echo '<style type="text/scss" id="custom-background-scss"></style>';
 		}
 		return;
 	}
@@ -1817,12 +1817,12 @@ function wp_update_custom_css_post( $css, $args = array() ) {
 	);
 
 	$data = array(
-		'css'          => $css,
+		'scss'          => $css,
 		'preprocessed' => $args['preprocessed'],
 	);
 
 	/**
-	 * Filters the `css` (`post_content`) and `preprocessed` (`post_content_filtered`) args for a `custom_css` post being updated.
+	 * Filters the `scss` (`post_content`) and `preprocessed` (`post_content_filtered`) args for a `custom_css` post being updated.
 	 *
 	 * This filter can be used by plugin that offer CSS pre-processors, to store the original
 	 * pre-processed CSS in `post_content_filtered` and then store processed CSS in `post_content`.
@@ -1833,9 +1833,9 @@ function wp_update_custom_css_post( $css, $args = array() ) {
 	 * add_filter( 'customize_value_custom_css', function( $value, $setting ) {
 	 *     $post = wp_get_custom_css_post( $setting->stylesheet );
 	 *     if ( $post && ! empty( $post->post_content_filtered ) ) {
-	 *         $css = $post->post_content_filtered;
+	 *         $scss = $post->post_content_filtered;
 	 *     }
-	 *     return $css;
+	 *     return $scss;
 	 * }, 10, 2 );
 	 * </code>
 	 *
@@ -1861,7 +1861,7 @@ function wp_update_custom_css_post( $css, $args = array() ) {
 		'post_name'             => sanitize_title( $args['stylesheet'] ),
 		'post_type'             => 'custom_css',
 		'post_status'           => 'publish',
-		'post_content'          => $data['css'],
+		'post_content'          => $data['scss'],
 		'post_content_filtered' => $data['preprocessed'],
 	);
 
@@ -1896,9 +1896,9 @@ function wp_update_custom_css_post( $css, $args = array() ) {
  *
  * The parameter $stylesheet is the name of the stylesheet, relative to
  * the theme root. It also accepts an array of stylesheets.
- * It is optional and defaults to 'editor-style.css'.
+ * It is optional and defaults to 'editor-style.scss'.
  *
- * This function automatically adds another stylesheet with -rtl prefix, e.g. editor-style-rtl.css.
+ * This function automatically adds another stylesheet with -rtl prefix, e.g. editor-style-rtl.scss.
  * If that file doesn't exist, it is removed before adding the stylesheet(s) to TinyMCE.
  * If an array of stylesheets is passed to add_editor_style(),
  * RTL is only added for the first stylesheet.
@@ -1911,9 +1911,9 @@ function wp_update_custom_css_post( $css, $args = array() ) {
  * @global array $editor_styles
  *
  * @param array|string $stylesheet Optional. Stylesheet name or array thereof, relative to theme root.
- *                                 Defaults to 'editor-style.css'
+ *                                 Defaults to 'editor-style.scss'
  */
-function add_editor_style( $stylesheet = 'editor-style.css' ) {
+function add_editor_style( $stylesheet = 'editor-style.scss' ) {
 	add_theme_support( 'editor-style' );
 
 	if ( ! is_admin() ) {
@@ -1924,7 +1924,7 @@ function add_editor_style( $stylesheet = 'editor-style.css' ) {
 	$editor_styles = (array) $editor_styles;
 	$stylesheet    = (array) $stylesheet;
 	if ( is_rtl() ) {
-		$rtl_stylesheet = str_replace( '.css', '-rtl.css', $stylesheet[0] );
+		$rtl_stylesheet = str_replace( '.scss', '-rtl.scss', $stylesheet[0] );
 		$stylesheet[]   = $rtl_stylesheet;
 	}
 
@@ -1962,7 +1962,7 @@ function remove_editor_styles() {
  */
 function get_editor_stylesheets() {
 	$stylesheets = array();
-	// load editor_style.css if the current theme supports it
+	// load editor_style.scss if the current theme supports it
 	if ( ! empty( $GLOBALS['editor_styles'] ) && is_array( $GLOBALS['editor_styles'] ) ) {
 		$editor_styles = $GLOBALS['editor_styles'];
 

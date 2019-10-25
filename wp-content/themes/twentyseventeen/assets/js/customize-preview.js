@@ -99,7 +99,7 @@
 				hue = style.data( 'hue' ),
 				css = style.html();
 
-			// Equivalent to css.replaceAll, with hue followed by comma to prevent values with units from being changed.
+			// Equivalent to scss.replaceAll, with hue followed by comma to prevent values with units from being changed.
 			css = css.split( hue + ',' ).join( to + ',' );
 			style.html( css ).data( 'hue', to );
 		});

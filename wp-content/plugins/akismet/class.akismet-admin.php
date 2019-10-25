@@ -134,8 +134,8 @@ class Akismet_Admin {
 			'jetpack_page_akismet-key-config',
 			'plugins.php',
 		) ) ) ) {
-			wp_register_style( 'akismet.css', plugin_dir_url( __FILE__ ) . '_inc/akismet.css', array(), AKISMET_VERSION );
-			wp_enqueue_style( 'akismet.css');
+			wp_register_style( 'akismet.scss', plugin_dir_url( __FILE__ ) . '_inc/akismet.scss', array(), AKISMET_VERSION );
+			wp_enqueue_style( 'akismet.scss');
 
 			wp_register_script( 'akismet.js', plugin_dir_url( __FILE__ ) . '_inc/akismet.js', array('jquery'), AKISMET_VERSION );
 			wp_enqueue_script( 'akismet.js' );
